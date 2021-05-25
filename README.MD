@@ -1,5 +1,7 @@
 # it-logger
 
+# Initial Set up
+
 # React & JSON-Server Setup
 
 ```zsh
