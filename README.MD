@@ -13,3 +13,9 @@ npx create-react-app .
 ```zsh
 npm i -D json-server concurrently
 ```
+
+# Install Materialize
+
+```zsh
+npm i materialize-css
+```
