@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import TechItem from './TechItem';
 
 export const TechListModal = () => {
     const [techs, setTechs] = useState([]);
@@ -25,7 +26,9 @@ export const TechListModal = () => {
                 <ul className="collection">
                     {!loading &&
                      techs !== null &&
-                     techs.map(tech => <li className="collection-item">{tech.firstName}</li>)}
+                     techs.map(tech => (
+                         <TechItem tech={tech} key={tech.id} />
+                     ))}
                 </ul>
             </div>
         </div>
