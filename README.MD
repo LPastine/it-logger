@@ -19,3 +19,9 @@ npm i -D json-server concurrently
 ```zsh
 npm i materialize-css
 ```
+
+# Install Moment package and React-Moment
+
+```zsh
+npm i moment react-moment
+```
