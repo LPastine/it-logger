@@ -30,12 +30,6 @@ router.post(
         const { message, attention, tech } = req.body;
 
         try {
-            // let technician = await Tech.findOne({ tech });
-
-            // if(!technician) {
-            //     return res.status(400).json({ msg: 'That technician does not exist' });
-            // }
-
             log = new Log({
                 message,
                 attention,
@@ -56,10 +50,17 @@ router.post(
 // @route   GET api/logs
 // @desc    Get logs from server
 // @access  Public
-router.get('/', async (req, res) => {
-    const data = await res.json();
-    res.send(data)
-});
+router.get('/', 
+    async (req, res) => {
+        try {
+            const logs = await Log.find({});
+            res.json(logs);
+        } catch (err) {
+            console.error(err.message);
+            res.status(500).send('Server error');
+        }
+    }
+);
 
 // @route   DELETE api/logs/:id
 // @desc    Delete log from server

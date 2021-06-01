@@ -10,9 +10,6 @@ const LogSchema = mongoose.Schema({
         required: true,
     },
     tech: {
-        // Change this after tech route implementation
-        // type: mongoose.Schema.Types.ObjectId,
-        // ref: 'tech',
         type: String,
         required: true,
     },
